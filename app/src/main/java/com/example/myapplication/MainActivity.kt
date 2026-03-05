@@ -38,10 +38,24 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )
 }
 
+@Composable
+fun Teste(name: String) {
+    Text(text = "Mano, se isso der certo o $name é muito foda!")
+}
+
+
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     MyApplicationTheme {
         Greeting("Android")
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun TestePreview() {
+    MyApplicationTheme {
+        Teste("Tiago")
     }
 }
