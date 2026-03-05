@@ -20,10 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyApplicationTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Tiago, and World!",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    Teste(name = "Tiago", modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -39,8 +36,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun Teste(name: String) {
-    Text(text = "Mano, se isso der certo o $name é muito foda!")
+fun Teste(name: String, modifier: Modifier = Modifier) {
+    Text(text = "Mano, se isso der certo o $name é muito foda!", modifier)
 }
 
 
